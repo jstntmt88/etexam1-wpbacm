@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Calculator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>BMR Calculator</h2>
+
+  <ion-item>
+    <ion-label color="dark"> Sex: </ion-label>
+    <ion-select interface="popover" [(ngModel)]="sex">
+      <ion-option value="m">Male</ion-option>
+      <ion-option value="f">Female</ion-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-item> 
+    <ion-label color="dark"> Height in Centimeters:  </ion-label>
+ <ion-input type="number" [(ngModel)]="height"></ion-input>
+  </ion-item>
+
+  <ion-item> 
+    <ion-label color="dark"> Weight in Kilograms:  </ion-label>
+ <ion-input type="number" [(ngModel)]="weight"></ion-input>
+  </ion-item>
+
+  <ion-item> 
+    <ion-label color="dark"> Age:  </ion-label>
+<ion-input type="number" [(ngModel)]="age"></ion-input>
+  </ion-item>
+    
+  <ion-item>
+    <ion-label color="dark"> Activity Level: </ion-label>
+    <ion-select interface="popover" [(ngModel)]="eFreq">
+      <ion-option value="sedentary">Little or no exercise</ion-option>
+      <ion-option value="slightlyactive">Light exercise or sports 1-2 days/week</ion-option>
+      <ion-option value="moderatelyactive">Moderate exercise or sports 2-3 days/week</ion-option>
+      <ion-option value="veryactive">Hard exercise or sports 4-5 days/week</ion-option>
+      <ion-option value="extraactive">Very hard exercise, physical job or sports 6-7 days/week</ion-option>
+      <ion-option value="athlete">Professional Athlete</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <button ion-button color= "dark" (click)="dCal()"> CALCULATE </button>
+
+<ion-item *ngIf="mRate">
+   <h2>Your Basal Metabolic Rate (BMR) is: {{mRate}}</h2>
+   </ion-item>
+
+   <ion-item *ngIf="kCal">
+   <h2>With an intake of {{kCal}} kcal/day </h2>
+   </ion-item>
+   
+</ion-content>

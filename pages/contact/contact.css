@@ -1,0 +1,21 @@
+ion-content{
+  background: #fff7e3;
+}
+h1 {
+  color: #694503;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  
+}
+h2 {
+  color: #694503;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+}
+ion-label {
+  color: #694503;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+p {
+  color: #694503;
+    font-family: montserrat
+}
